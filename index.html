@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Секретное сообщение для тебя</title>
+    <title>Музыка для тебя</title>
     <style>
         body {
             font-family: 'Georgia', serif;
@@ -33,6 +34,24 @@
             color: #3a3a3a;
             margin-bottom: 30px;
             line-height: 1.6;
+            text-align: center;
+        }
+        button {
+            padding: 15px 25px;
+            font-size: 1.1rem;
+            background-color: #f9a8d4;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #f78fb3;
+        }
+        audio {
+            margin-top: 20px;
+            width: 80%;
         }
         @keyframes fadeIn {
             0% {
@@ -55,10 +74,25 @@
 <body>
 
 <div id="container">
-    <h1>Привет, Дилфуза!</h1>
-    <p>Ты – моя вдохновляющая звезда, и я готов делать всё, чтобы ты была счастлива. Ты заслуживаешь только лучшего в этом мире.</p>
-    <p>С любовью, твой тайный поклонник.</p>
+    <h1>Для тебя, Дилфуза</h1>
+    <p>Ты — как лучик солнца в моей жизни. Я не могу представить свой мир без тебя. Ты приносишь радость, вдохновение и невероятную гармонию. Ты — не просто человек, ты целый мир, наполненный светом и теплом. Твоя улыбка делает все вокруг ярче, а твой голос — словно музыка для моей души.</p>
+    <p>Я не знаю, как выразить все свои чувства, но я уверен, что ты особенная. Ты даришь мне счастье, и я горжусь тем, что могу быть рядом с таким удивительным человеком. Твои глаза — это глубокие океаны, а твоя душа — неисчерпаемый источник красоты и доброты.</p>
+    <p>Ты невероятно умная, красивая и невероятно сильная. Ты — моя поддержка и мой вдохновитель. Ты стоишь на пьедестале в моем сердце, и никто не сможет занять твое место. Ты — лучшее, что случилось со мной. ты мне нравишся !!</p>
+    <button onclick="playMusic()">Включить музыку</button>
+
+    <audio id="music" controls style="display:none;">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+        Ваш браузер не поддерживает аудио.
+    </audio>
 </div>
+
+<script>
+    function playMusic() {
+        var music = document.getElementById("music");
+        music.style.display = "block";
+        music.play();
+    }
+</script>
 
 </body>
 </html>
