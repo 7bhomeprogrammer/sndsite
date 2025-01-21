@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Музыка для тебя</title>
+    <title>Дильфуза</title>
     <style>
         body {
-            font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #f5a4d5, #e3c1f2);
+            font-family: 'Cursive', serif;
+            background: linear-gradient(135deg, #ffdde1, #ee9ca7);
             margin: 0;
             padding: 0;
             display: flex;
@@ -17,83 +17,63 @@
         }
         #container {
             text-align: center;
-            padding: 30px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 15px;
+            padding: 50px;
+            background-color: rgba(255, 250, 250, 0.9);
+            border-radius: 20px;
             box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
             animation: fadeIn 2s ease-in-out;
         }
         h1 {
-            font-size: 2.5rem;
-            color: #f9a8d4;
+            font-size: 3rem;
+            color: #ff6f91;
             margin-bottom: 20px;
-            animation: slideIn 2s ease-in-out;
+            animation: zoomIn 1.5s ease-in-out;
         }
         p {
-            font-size: 1.2rem;
-            color: #3a3a3a;
+            font-size: 1.4rem;
+            color: #5f5f5f;
             margin-bottom: 30px;
-            line-height: 1.6;
-            text-align: center;
+            font-style: italic;
+            line-height: 1.8;
         }
         button {
-            padding: 15px 25px;
-            font-size: 1.1rem;
-            background-color: #f9a8d4;
+            padding: 15px 30px;
+            font-size: 1.2rem;
             color: white;
+            background-color: #ff6f91;
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: transform 0.3s, background-color 0.3s;
         }
         button:hover {
-            background-color: #f78fb3;
-        }
-        audio {
-            margin-top: 20px;
-            width: 80%;
+            background-color: #f46e86;
+            transform: scale(1.1);
         }
         @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
-        @keyframes slideIn {
-            0% {
-                transform: translateY(-30px);
-            }
-            100% {
-                transform: translateY(0);
-            }
+        @keyframes zoomIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
         }
     </style>
 </head>
 <body>
-
-<div id="container">
-    <h1>Для тебя, Дилфуза</h1>
-    <p>Ты — как лучик солнца в моей жизни. Я не могу представить свой мир без тебя. Ты приносишь радость, вдохновение и невероятную гармонию. Ты — не просто человек, ты целый мир, наполненный светом и теплом. Твоя улыбка делает все вокруг ярче, а твой голос — словно музыка для моей души.</p>
-    <p>Я не знаю, как выразить все свои чувства, но я уверен, что ты особенная. Ты даришь мне счастье, и я горжусь тем, что могу быть рядом с таким удивительным человеком. Твои глаза — это глубокие океаны, а твоя душа — неисчерпаемый источник красоты и доброты.</p>
-    <p>Ты невероятно умная, красивая и невероятно сильная. Ты — моя поддержка и мой вдохновитель. Ты стоишь на пьедестале в моем сердце, и никто не сможет занять твое место. Ты — лучшее, что случилось со мной. ты мне нравишся !!</p>
-    <button onclick="playMusic()">Включить музыку</button>
-
-    <audio id="music" controls style="display:none;">
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
-        Ваш браузер не поддерживает аудио.
-    </audio>
-</div>
-
-<script>
-    function playMusic() {
-        var music = document.getElementById("music");
-        music.style.display = "block";
-        music.play();
-    }
-</script>
-
+    <div id="container">
+        <h1>Добро пожаловать, Дильфуза!</h1>
+        <p>
+            Мир становится лучше с тобой.<br> 
+            Пусть этот момент будет началом чего-то прекрасного. ты мне нравишся 💖
+        </p>
+        <button onclick="returnToMain()">Назад</button>
+    </div>
+    <script>
+        function returnToMain() {
+            window.location.href = "index.html"; // Ссылка на первый сайт
+        }
+    </script>
 </body>
 </html>
 
